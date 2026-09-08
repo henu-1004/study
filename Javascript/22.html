@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Example</title>
+  <style>
+    .container {
+      display: flex;
+      height: 150px;
+      border: 2px solid black;
+      margin-bottom: 20px;
+    }
+    .item {
+      width: 60px;
+      height: 60px;
+      background: tomato;
+      margin: 5px;
+      text-align: center;
+      line-height: 60px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>justify-content</h2>
+  <h3>space-between</h3>
+  <div class="container" style="justify-content: space-between;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>center</h3>
+  <div class="container" style="justify-content: center;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h2>align-items</h2>
+  <h3>flex-start (위쪽)</h3>
+  <div class="container" style="align-items: flex-start;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>center (세로 가운데)</h3>
+  <div class="container" style="align-items: center;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>flex-end (아래쪽)</h3>
+  <div class="container" style="align-items: flex-end;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+</body>
+</html>

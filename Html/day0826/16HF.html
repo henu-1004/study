@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  HF한국주택금융공사 </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<style>
+body{
+    background-color: rgb(227, 228, 240);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1{
+    color: rgb(60, 60, 104);
+    font-weight: 100;
+    margin:50px 0;
+}
+
+
+main{
+   display: flex;
+}
+
+
+section{
+    background-color: white;
+    border-radius: 1%;
+    width: 300px;
+    height: 550px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    margin: 15px;
+    cursor: pointer;
+    display: flex-column;
+    justify-content: space-between;
+}
+
+section:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 0.3s ease-in-out;
+    transform-origin:0 100%; /*회전 중심점(원점·기준점)을 지정 (x축,y축,z축)*/
+    transform: scaleY(1.04);
+}
+
+h3{
+    color: gray;
+    font-weight: 200;
+}
+
+section p{
+    color: rgb(0, 102, 255);
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex; 
+    flex-direction: column;
+}
+
+
+section p span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section img{
+    width: 130px;
+    filter: grayscale(0.4);
+    align-self: center; 
+}
+
+</style>
+
+<body>
+   16HF.html <br>
+    <h1> <b> 국민과 함께 성장하는 글로벌 주택금융 리더</b></h1>
+    <main>
+        <section>
+            <h2> 보금자리론 </h2>
+            <h3>0.1%p 더 저렴한 금리</h3>
+            <p><span>최대</span><br>
+                주택가격 6억원
+                <img src="images/pic01.png" width="300">
+            </p>
+        </section>
+
+        <section>
+            <div>
+                <h2> 내집마련 디딤돌 </h2>
+                <h3>내 집 마련 꿈의 실현</h3>
+                <p><span>최대</span><br>
+                    LTV 70%
+                </p>
+            </div>
+            <img src="images/pic02.png" width="300">
+
+
+        </section>
+
+        <section>
+            <h2> 주택보증 </h2>
+            <h3>전.월세보증금의 든든한 버팀목</h3>
+            <p><span>최대</span><br>
+                보증한도 2억원
+                <img src="images/pic03.png" width="300">
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>

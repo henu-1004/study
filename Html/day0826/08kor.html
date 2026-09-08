@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 08kor.html </title>
+    <script>
+      function myscore(){
+        var kor = 30 ;
+        var eng = 90 ;
+        var total=0, avg=0 ;
+        var message = "";
+
+        total = kor + eng ;
+        avg = total / 2 ;
+        console.log("총점=" + total);
+        console.log("평균=" + avg);
+
+        message = "<b>총점 = " + total + " 평균 = " + avg +"</b><br>" ;
+        //document.writeln(message);
+        document.querySelector("#display").innerHTML = message ; //권장
+        //document.getElementById("display").innerHTML = message ; //권장
+        //에러아님,작동안됨 document.getElementById("display").innerhtml = message ;  //html이 소문자라
+         //에러아님 작동안됨document.querySelector("#display").innerhtml = message ;//html이 소문자라
+      }//end
+    </script>
+</head>
+<body>
+    <b> 08kor.html 점수계산 5:03  </b>  <br>
+    <input type="button" onclick="myscore();" value="계산함수호출"> <br>
+    수험생: 고길동  <br>
+    <div id="display">
+      <img src="./images/a1.png" width="250" height="150"> <br> 
+    </div>
+</body>
+</html>

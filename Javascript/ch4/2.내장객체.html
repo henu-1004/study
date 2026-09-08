@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.내장객체</title>
+<!--
+        날짜 : 2025.08.28
+        이름 : 서현우
+        내용 : 4장 자바스크립트 객체
+    -->
+</head>
+<body>
+    <h3>2.내장객체</h3>
+
+    
+    <h4>Array</h4>
+
+    <script>
+        //배열 생성
+        const arr1=[1,2,3,4,5];
+        const arr2=new Array(6,7,8,9,10);
+
+        document.write('arr1 : ' + arr1 + '<br>');
+        document.write('arr2 : ' + arr2 + '<br>');
+
+        //배열 추출
+        document.write('arr1.at(0) : ' + arr1.at(0) + '<br>');
+        document.write('arr1.at[0] : ' + arr1[0] + '<br>');
+        document.write('arr2.at(1) : ' + arr2.at(1) + '<br>');
+        document.write('arr2[1] : ' + arr2[1] + '<br>');
+
+        //배열 추가
+        arr1.push(6);
+        arr1.push(7);
+        arr1.push(8);
+        arr2.unshift(5);
+        arr2.unshift(4);
+
+        document.write('추가이후 배열 > arr1 : ' + arr1 + '<br>');
+        document.write('추가이후 배열 > arr2 : ' + arr2 + '<br>');
+
+        //배열 연결
+        const arr3 = arr1.concat(arr2);
+        document.write('arr3 : ' + arr3 + '<br>');
+
+        //배열 문자열 생성
+        const arr4 =  arr1.join('-'); //join문자열 '-'로 배열원소출력
+        const arr5 =  arr2.join('^');
+        
+        document.write('arr4 : ' + arr4 + '<br>');
+        document.write('arr5 : ' + arr5 + '<br>');
+
+        //배열반복문
+        arr1.forEach(function(item,index){
+            document.write('arr1 item : ' + item + ', index: ' + index + '<br>');
+        });
+
+        arr2.forEach((item,idx)=>{
+            document.write('arr2 item : ' + item + ', index: ' + idx + '<br>');
+        });
+
+
+        //배열 원소 일괄 처리
+        const result1 = arr3.map(function(item){
+            return item*10;
+        });
+
+        document.write('result1 : ' + result1 + '<br>');
+
+        const result2 = arr3.map(item=>item*3);
+        document.write('result2 : ' + result2 +'<br>');
+
+        const result3 = arr3.map(item => item % 2 ==0);
+        document.write('result3 : ' + result3 +'<br>');
+
+        const result4 = arr3.filter(item=>item%2==0);
+        document.write('result4 : ' + result4 +'<br>');
+
+        const result5 = arr1.sort((a,b) => a - b); //오름차순
+        const result6 = arr2.sort((a,b) => b - a); //내림차순
+
+        document.write('result5 : ' + result5 +'<br>');
+        document.write('result6 : ' + result6 +'<br>');
+
+        const result7 = arr3
+                            .map(item => item*2)
+                            .filter(item => item>10)
+                            .sort((a,b) => a-b);
+        document.write('result7 : ' + result7 +'<br>');
+
+        
+        //배열 구조 분해 할당
+        const [spring,summer,fall,winter]=['봄','여름','가을','겨울'];
+        document.write('spring : ' + spring + '<br>');
+        document.write('summer : ' + summer + '<br>');
+        document.write('fall : ' + fall + '<br>');
+        document.write('winter : ' + winter + '<br>');
+
+    </script>
+
+    <h4>String</h4>
+    <script>
+        const str1 = 'Hello Korea';
+        const str2 = new String('Hello Korea');
+        const str3 = ' ab cd ef ';
+        const str4 = '서울,대전,대구,부산,광주';
+
+        let r1 = str1.length;
+        let r2 = str1.charAt(0);
+        let r3 = str1[0];
+        let r4 = str1.indexOf('e');
+        let r5 = str1.lastIndexOf('e');
+        let r6 = str2.replace('Korea', 'Busan');
+        let r7 = str2.substring(0,5);
+        let r8 = str3.trim();
+        let r9 = str4.split(',');   
+        
+        document.write('r1 : ' + r1 + '<br>');
+        document.write('r2 : ' + r2 + '<br>');
+        document.write('r3 : ' + r3 + '<br>');
+        document.write('r4 : ' + r4 + '<br>');
+        document.write('r5 : ' + r5 + '<br>');
+        document.write('r6 : ' + r6 + '<br>');
+        document.write('r7 : ' + r7 + '<br>');
+        document.write('r8 : ' + r8 + '<br>');
+        document.write('str4 : ' + str4 + '<br>');
+        document.write('r9 : ' + r9 + '<br>');
+        document.write('r9[0] : ' + r9[0] + '<br>');
+        document.write('r9[1] : ' + r9[1] + '<br>');
+
+
+    </script>
+    <h4>RegExp</h4>
+    <script>
+        //정규표현식
+        const regexp=new RegExp(/\d{3}/);
+
+        let t1 = regexp.test('hello');
+        let t2 = regexp.test('12');
+        let t3 = regexp.test('123');
+        let t4 = regexp.test('1234');
+
+        document.write('t1 : ' + t1 + '<br>')
+        document.write('t2 : ' + t2 + '<br>')
+        document.write('t3 : ' + t3 + '<br>')
+        document.write('t4 : ' + t4 + '<br>')
+
+        //정규표현식 플래그
+        const sample = 'Hello World hello javascript hello regex';
+
+        const re1=/hello/;
+        const re2=/hello/i; //i : ignore, 대소문자무시
+        const re3=/hello/g; //g : global , 전체문자열 검색
+        const re4=/hello/ig;
+
+        document.write('re1 result : ' + sample.match(re1) + '<br>');
+        document.write('re2 result : ' + sample.match(re2) + '<br>');
+        document.write('re3 result : ' + sample.match(re3) + '<br>');
+        document.write('re4 result : ' + sample.match(re4) + '<br>');
+        // 정규표현식 메타문자
+        /*
+            ^ : 정규표현식 문자열 시작
+            $ : 정규표현식 문자열 끝
+            { : 정규표현식 문자열 반복 시작
+            } : 정규표현식 문자열 반복 끝
+            | : 정규표현식 OR
+            [ : 사용자 정의 정규표현식 시작
+            ] : 사용자 정의 정규표현식 끝
+            - : 정규표현식 문자열 범위
+            . : 문자 하나
+            + : 문자가 1번 이상 반복되는 문자열
+            ? : 문자가 0번 또는 1번인 문자열
+            * : 문자가 0번 이상 반복되는 문자열 
+        */
+        const reg1 = /^[0-9]+$/;      // 숫자
+        const reg2 = /^[1-9]\d*/;     // 숫자(양수)
+        const reg3 = /^\-[1-9]\d*/;   // 숫자(음수)
+        const reg4 = /^[a-zA-Z]+$/;   // 영문자
+        const reg5 = /^[a-zA-Z0-9]+$/ // 숫자와 영문자
+        const reg6 = /^[가-힣]+$/;     // 한글문자
+        const reg7 = /^.{5,10}$/;     // 문자열 길이가 5~10
+
+        document.write('reg1 test : ' + reg1.test('apple') + '<br>');
+        document.write('reg1 test : ' + reg1.test('123') + '<br>');
+        document.write('reg2 test : ' + reg2.test('10') + '<br>');
+        document.write('reg2 test : ' + reg2.test('-10') + '<br>');
+        document.write('reg3 test : ' + reg3.test('-10') + '<br>');
+        document.write('reg4 test : ' + reg4.test('apple') + '<br>');
+        document.write('reg4 test : ' + reg4.test('apple123') + '<br>');
+        document.write('reg4 test : ' + reg4.test('Apple') + '<br>');
+        document.write('reg5 test : ' + reg5.test('Apple123') + '<br>');
+        document.write('reg6 test : ' + reg6.test('홍길동') + '<br>');
+        document.write('reg6 test : ' + reg6.test('홍길동123') + '<br>');
+        document.write('reg7 test : ' + reg7.test('abcd') + '<br>');
+        document.write('reg7 test : ' + reg7.test('abcde') + '<br>');
+        document.write('reg7 test : ' + reg7.test('abcd123') + '<br>');
+
+        // 자주 사용하는 정규표현식
+        const regEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        const regPass  = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
+        const regHp    = /^\d{3}-\d{3,4}-\d{4}$/;
+
+        document.write('regEmail : ' + regEmail.test('홍길동@한국.com') + '<br>');
+        document.write('regEmail : ' + regEmail.test('hong1234@korea.com') + '<br>');
+        document.write('regPass : ' + regPass.test('Pass1234!@#') + '<br>');
+        document.write('regHp : ' + regHp.test('010-123-1001') + '<br>');
+        
+    </script>
+
+    <h4>Math</h4>
+    <script>
+        let rs1 = Math.abs(-5);
+        let rs2 = Math.sqrt(9);
+        let rs3 = Math.ceil(1.2);
+        let rs4 = Math.ceil(1.8);
+        let rs5 = Math.floor(1.2);
+        let rs6 = Math.floor(1.8);
+        let rs7 = Math.round(1.2);
+        let rs8 = Math.round(1.8);
+
+        document.write('rs1 : ' + rs1 + '<br>');
+        document.write('rs2 : ' + rs2 + '<br>');
+        document.write('rs3 : ' + rs3 + '<br>');
+        document.write('rs4 : ' + rs4 + '<br>');
+        document.write('rs5 : ' + rs5 + '<br>');
+        document.write('rs6 : ' + rs6 + '<br>');
+        document.write('rs7 : ' + rs7 + '<br>');
+        document.write('rs8 : ' + rs8 + '<br>');
+
+
+        let n1 = Math.random();//0~1사이 실수
+        let n2 = n1 * 10; //0~10사이 실수
+        let n3 = Math.ceil(n2); //1~10사이 정수
+        document.write('n3 : ' + n3 + '<br>');
+        document.write('1부터 10까지 임의의 정수 : ' + Math.ceil(Math.random()*10) + '<br>')
+    </script>
+
+
+    <h4>Date</h4>
+    <script>
+        const date = new Date();
+        document.write('date:'+date+'<br>');
+
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1; //1월이 0으로 나와서 +1해줌
+        let dt = date.getDate();
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+
+        //템플릿 문자열 ``
+        document.write(`${year}년 ${month}월 ${dt}일 ${hour}:${min}:${sec}`);
+    </script>
+    
+    
+</body>
+</html>

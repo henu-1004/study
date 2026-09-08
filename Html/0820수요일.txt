@@ -1,0 +1,249 @@
+공유폴더
+\\192.168.0.8
+
+디코주소
+https://discord.gg/m4FGuZZb
+
+컬러색알아내기 스포이드 
+https://photokit.com/colors/eyedropper/?lang=ko
+ㄴ인스타 컬러  #515FFD
+
+
+ㄴ8-20-수요일 수업순서
+ 글꼴크기 표준 1em = 16px = 12pt 동일 
+
+사과주문광고 만들기
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 04apple.html</title>
+     <style>
+
+     </style>
+</head>
+<body>
+  <!-- 
+  첫번째 div, 확인사항h1, a태그 주문및배송
+  p태그본문내용 오후2시 이전~~~ 발송합니다(주말제외)   
+  hr태그 가로선 
+  table태그는 비권장 
+  -->
+  <div class="wrap">
+    <img src="https://cdn.imweb.me/thumbnail/20201126/74167caae1c94.png">
+    <div class="container">
+        
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+ <form action method> 서브밋버튼  </form>
+ form태그 + 순서없는 <ul> <li> </li> </ul> + 스타일 
+
+ <태그  class="bestA"> class속성 내용 </태그> 접근 .
+ <태그  id="bestA">  id 속성 내용 </태그>  접근 #
+
+
+https://cdn.imweb.me/thumbnail/20201126/74167caae1c94.png
+
+
+인라인,블럭라인 태그분류
+ ㄴinline인라인는 라인개행적용안됨  <span> 
+ ㄴblock블럭라인 자동라인개행 적용  <div> <p>
+
+He deals the cards as a meditation
+And those he plays never suspect
+He doesn't play for the money he wins
+He don't play for respect
+
+He deals the cards to find the answer
+The sacred geometry of chance
+The hidden law of a probable outcome
+The numbers lead a dance
+
+
+ㄴ8-19-화요일 수업순서
+ 커피문서 스타일 적용
+ table태그 설명 실습
+ 태그 고유한 id,class 명명후 스타일 적용
+ id일때 #접근
+ class일때 .접근
+
+ 컬러지정 
+p { color:red; }
+p { color:#ff0000; }  16진수표현 #레드그린블루   #000000블랙
+p { color: rgb(255,0,0); } 
+https://www.w3schools.com/html/html_colors.asp
+
+
+컴퓨터프로그래밍언어 - c,java,python,C#, SQLanguage, html태그
+html언어보다는 html태그는 웹브라우저에서 실행됩니다.
+ㄴ웹브라우저 기본통신 프로토콜 http
+ㄴ웹브라우저 기본언어 html태그
+  <h숫자> </h숫자> 
+  <img src="경로"> 
+  <a href=""> 안내문 </a>
+  <ol> <li>~~ </ol>   <ul> <li>~~ </ul>
+  <u><i><b><em><del>글꼴스타일 </u></i></b></em></del>
+
+공유폴더
+\\192.168.0.8
+
+
+
+
+순서1] 깃주소
+https://github.com/posasi2000/htmlcssjs
+
+
+순서2] www.w3schools
+https://www.w3schools.com/
+
+
+순서3] vscode다운로드후 설치
+https://code.visualstudio.com/download
+
+
+순서4] 작업폴더 C:\workHtml
+C:\workHtml
+ㄴday0818
+  ㄴimages
+  ㄴ01test.html
+  ㄴ02test.html
+  ㄴ09form.html
+  ㄴ10test.html
+
+참고] 영임쌤  컴퓨터ip 
+\\192.168.0.8
+
+
+
+순서5] 컴퓨터 언어 종류와 특징
+ html, java, python, 리액트, vue, javascript
+ 웹프로그램 - php, asp, aspx, jsp, 스프링
+ 빅데이터의 웹크롤링 (네이버 웹튠, 주식데이터, 커피빈)
+ 빅데이터처리 웹으로 출력(streamlit,fastapi, gradio)
+ 빅데이터 파이썬 웹서버 프로그램 - Django, Flask
+
+https://www.coffeebeankorea.com/store/store.asp
+https://category.gmarket.co.kr/listview/L100000020.aspx
+https://www.shinhan.com/index.jsp
+https://www.egovframe.go.kr/home/main.do
+개발가이드-> 개발환경-> 표준프레임워크 개발환경 4.3가이드
+https://www.instagram.com
+
+
+순서6] vsCode환경세팅 
+File메뉴-> Open Folder =>  day0818선택
+왼쪽 5번째 아이콘 Extensions -> Live Server
+File메뉴  AutoSave체크권장
+File메뉴  Preferences -> Settings-> Mouse Wheel Zoom 체크권장
+File메뉴  Preferences -> Themes-> Color Theme-> Dark권장
+
+한글/영문변환
+View메뉴 Command Palette(명령 팔레트)
+  ㄴ configure display language검색후  선택
+    간단하게 cdl이라고 검색해도 된다 (en영어권장)
+
+
+순서7] html언어  
+📌 HTML이란?
+HTML (HyperText Markup Language)
+→ 웹 페이지를 만들 때 사용하는 마크업 언어입니다.
+→ 프로그래밍 언어가 아니라, 웹 브라우저가 문서를 어떻게 구조화하고 보여줄지를 정의하는 언어입니다.
+
+📌 웹 크롤링이란?
+웹 크롤링은 웹 사이트에서 자동으로 데이터를 수집하는 작업입니다.
+보통 크롤러(Crawler) 또는 스파이더(Spider)라고 불리는 프로그램이 웹 페이지를 방문해서
+HTML 문서를 가져오고, 필요한 정보를 추출(parse)해서, 저장(데이터베이스, 파일 등) 하는 과정입니다.
+
+📌 웹 크롤링과 스크래핑
+웹 크롤링 (Crawling) : 여러 웹 페이지를 자동으로 탐색하며 정보를 가져오는 과정
+웹 스크래핑 (Scraping) : 특정 웹 페이지에서 원하는 데이터만 추출하는 작업
+👉 두 개념은 구분해서 쓰기도 하지만, 보통 혼용됩니다.
+
+순서8] 컬러색 스포라이드
+https://photokit.com/colors/eyedropper/?lang=ko
+
+
+
+순서9] 통신규약
+ ㄴTCT/IP(transmission control protocol / internet protocol)
+ ㄴFTP(file transfer protocol)
+ ㄴSMTP메일(simple mail transfer protocol)
+ ㄴDHCP(dynamic Host configuration protocol)
+ ㄴHTTP(hypertext transfer protocol)
+   ㄴ웹브라우저 프로토콜
+   ㄴ웹브라우저의 인식하는 html
+
+ <html> 
+   <head> <style></style> <script> </script> </head> 
+   <body>시각적표시</body> 
+ </html>
+
+
+
+html언어보다는 html태그
+ㄴ결과출력은 웹브라우저(웹서버프로그램-신한은행,G마켓,sns사이트)
+ㄴhtml언어 대소문자 구분이 없습니다
+ㄴhtml언어 단점은 라인개행=enter기능이 없습니다
+   한줄라인개행 <br>
+   문단라인개행 <p>
+ㄴhtml언어 단점은 <bnk> </bnk> <h2> </h2> <a href=""> </a>
+               <img src="">  <br> <p> <hr>
+
+
+ㄴhtml언어 태그tag <image source="경로파일명"> </image>
+  <img src="경로파일명"> </img>
+  <div>  </div>
+  <span> <span>
+
+ㄴ html구조 
+ <html> 
+   <head> <style></style> <script> </script> </head> 
+   <body>시각적표시</body> 
+ </html>
+
+
+기타설명
+<img src필수속성="./images/main_4.jpg" 
+     title="힐링장소" alt="테라스" width="230" height="70" > 
+
+source = src  필수속성
+width 옵션속성
+
+	속성 =  attribute, property
+
+태그에서 속성을 지정하지 않고 그대로 사용 <br>
+태그에서 필수속성은 명시 <img src필수속성="./images/main_4.jpg"> 
+ <img src필수속성="./images/main_4.jpg" />
+ <img src필수속성="./images/main_4.jpg"> </img>
+ <img src필수속성="./images/main_4.jpg"> 권장
+ <br/>
+
+ 
+순서10] 강사쌤 공유 폴더
+\\192.168.0.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

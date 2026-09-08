@@ -1,0 +1,6 @@
+apple
+banana
+cherry
+desk
+echo
+father

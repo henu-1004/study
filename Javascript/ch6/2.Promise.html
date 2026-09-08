@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Promise</title>
+    <!--
+        날짜 : 2025/09/01
+        이름 : 서현우
+        내용 : 6장 비동기처리와 AJAX    
+    -->
+</head>
+<body>
+    <h3>2.Promise</h3>
+    <script>
+        // Promise 생성
+        const promise = new Promise((resolve, reject)=>{
+
+            // 비동기 처리 작업             
+            const result = false;
+
+            if(result){
+                // 작업 성공
+                resolve('promise success...');
+            }else{
+                // 작업 실패
+                reject('promise fail...');
+            }
+        });
+
+        // promise 실행
+        promise
+            .then((message)=>{
+                // 작업성공(resolve 호출)
+                console.log(message);
+
+            }).catch((message)=>{
+                // 작업실패(reject 호출)                
+                console.log(message);
+
+            }).finally(()=>{
+                // 마지막 실행
+                console.log('finally...');
+            });
+
+        // Promise 비동기 처리
+        function step1(){
+
+            return new Promise((resolve, reject)=>{
+
+                setTimeout(function(){
+                    resolve('step1...');
+                }, 1000);
+            });
+        }
+
+        function step2(msg){
+
+            console.log('step2 msg : ' + msg);
+
+            return new Promise((resolve, reject)=>{
+
+                setTimeout(function(){
+                    resolve('step2...');
+                }, 3000);
+            });
+        }
+
+        function step3(msg){
+
+            console.log('step3 msg : ' + msg);
+
+            return new Promise((resolve, reject)=>{
+
+                setTimeout(function(){
+                    resolve('step3...');
+                }, 2000);
+            });
+        }
+
+        step1()
+            .then((msg)=>{ // step1의 반환 promise의 resolve 호출
+                return step2(msg);
+            })
+            .then((msg)=>step3(msg)) // step2의 반환 promise의 resolve 호출
+            .then((msg)=>{           // step3의 반환 promise의 resolve 호출
+                console.log('done...');
+            })
+            .catch((msg)=>{
+                console.log('catch... : ' + msg);
+            })
+            .finally(()=>{
+                console.log('finally...');
+            });
+    
+
+        //async/await이용한 비동기 처리
+        async function process(){
+            
+            //await를 함수를 호출하는 함수는 async선언
+            const msg1 = await step1(); //await는 비동기 처리 작업 완료 대기
+            const msg2 = await step2(msg1);
+            const msg3 = await step3(msg2);
+
+            console.log(msg3);
+        }
+
+        process();
+
+        document.addEventListener('DOMContentLoaded', function(){
+
+            const coffee = document.getElementsByName('coffee')[0];
+            const btnOrder = document.getElementById('btnOrder');
+            const message = document.getElementById('message');
+
+            btnOrder.addEventListener('click', function(e){
+                
+
+            });
+
+            function makeCoffee(coffee){
+
+                boilWater(coffee).then().then().then();
+
+            }
+
+            function boilWater(coffee){
+                message.innerText=`${coffee}를 위해 물을 끓입니다.`
+
+                return new Promise((resolve, resject)=>{
+                    setTimeout(function(){
+                        resolve(coffee);
+                    },2000);
+                })
+            }
+            function brewCoffee(){
+                message.innerText=`${coffee}를 위해 물을 끓입니다.`
+
+                return new Promise((resolve, resject)=>{
+                    setTimeout(function(){
+                        resolve(coffee);
+                    },2000);
+                })
+            }
+            function pourCofee(){
+                message.innerText=`${coffee}를 위해 물을 끓입니다.`
+
+                return new Promise((resolve, resject)=>{
+                    setTimeout(function(){
+                        resolve(coffee);
+                    },2000);
+                })
+            }
+            function doneCoffee(){}
+
+
+        })
+
+
+
+    </script>
+
+    <input type="text" name="coffee">
+    <input type="button" id="btnOrder" value="주문하기">
+
+    <h4 id="message">준비중...</h4>
+    
+</body>
+</html>

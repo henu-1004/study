@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 08text-shadow.html </title>
+    <style>
+        *{font-size: 32pt; }
+
+        .title{
+            font-size: 34pt;
+            color: red;
+            /* text-shadow: 7px 7px 4px black ;  */
+            text-shadow: 7px 7px 4px skyblue ; 
+        }
+
+        .container1{
+           width: 200px; height: 200px;
+           background-color: yellow;
+           box-shadow: 10px 10px 5px brown;
+           margin-bottom: 50px;
+        }
+
+        .container2{
+           width: 200px; height: 200px;
+           background-color: yellow;
+           box-shadow: 
+             -15px -25px 3px 1px inset brown ,
+             10px 10px   5px 2px  blueviolet
+            ;
+        }
+
+
+        .shadow11{
+           color: yellowgreen;
+        }
+        .shadow12{
+           color: cadetblue;
+        }
+
+
+        .shadow13{
+           color: darkblue;
+           text-shadow: 
+              -10px -10px 5px  rgba(90,80,125, 0.7),
+              10px  10px  5px  blueviolet
+           ;
+
+        }
+
+        .shadow14{
+           color: aqua;
+           text-shadow: 
+            0 0 3px gray,
+            2px 10px  6px yellow,
+            2px 19px 18px red,
+            2px 19px 20px orange
+            ;
+        }
+
+    </style>
+</head>
+<body>
+  08text-shadow.html <br>
+  <h1 class="title"> Web FontEnd 웹개발자 </h1>
+
+  <div class="container1">
+  </div>
+  <div class="container2">
+  </div>
+
+  <p></p>
+    <h1 class="shadow11"> HTML5 CSS3 개발자 </h1>
+    <h1 class="shadow12"> HTML5 CSS3 개발자 </h1>
+    <h1 class="shadow13"> HTML5 CSS3 개발자 </h1>
+    <h1 class="shadow14"> HTML5 CSS3 개발자 </h1>
+
+
+    <p style="margin-bottom: 100px;"></p>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+    bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb <br>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 07pizzanth.html </title>
+    <style>
+        *{font-size: 20pt;}
+        ul li {
+            width: 450;
+            margin-bottom: 10px;
+        }
+
+        /* ul li:nth-child(1){
+            color: red;
+        } */
+
+        /* ul li:nth-child(2n+1){  //홀수
+            color: red;
+        } */
+
+        /* ul li:nth-child(2n){  //짝수
+            color: red;
+        } */
+
+        ul li:nth-child(even){  
+            color: pink;
+            font-weight: bold;
+        }
+
+        ul li:nth-child(1){
+            color: green;
+            font-weight: bold;
+        } 
+
+        ul li:nth-last-child(1){
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h3> 파스타 & 피자 인기</h3>
+    <ul>
+        <li>스파게티(Spaghetti) ...</li>
+        <li>링귀네(Linguine) ...</li>
+        <li>부카티니(Bucatini) ...</li>
+        <li>탈리아텔레(Tagliatelle) ...</li>
+        <li>페투치네(Fettuccine) ...</li>
+        <li>라자냐(Lasagna) ...</li>
+        <li>펜네(Penne) ...</li>
+        <li>푸실리(Fusilli)</li>
+        <li>페델리니(Fedelini)</li>
+        <li>라비올리(Ravioli)</li>
+        <li>미스터 피자</li>
+        <li>새우버거</li>
+        <li>불고기버거</li>
+    </ul>
+</body>
+</html>

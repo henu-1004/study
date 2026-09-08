@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.내장함수</title>
+        <!--
+        날짜:2025/08/28
+        이름:서현우
+        내용:3장 배열과 함수
+    -->
+</head>
+<body>
+    <h3>3.내장함수</h3>
+    <script>
+
+        //숫자변환
+        let str1 = '10';
+        let str2 = '3.14';
+        let str3 = '2025년';
+
+        let r1 = parseInt(str1); //문자열정수를 정수로 변환
+        let r2 = parseInt(str2);
+        let r3 = parseInt(str3); //숫자가 아닌 문자는 제외
+        let r4 = parseFloat(str2);
+
+        let r5 = Number(str1); //문자열 전체가 숫자로 변환 가능한지 검사
+        let r6 = Number(str2);
+        let r7 = Number(str3); //숫자가 아닌 문자가 있으면 변환 실패 Nan반환(낫어넘버)
+
+        document.write('r1 :' + r1+'<br>');
+        document.write('r2 :' + r2+'<br>');
+        document.write('r3 :' + r3+'<br>');
+        document.write('r4 :' + r4+'<br>');
+        document.write('r5 :' + r5+'<br>');
+        document.write('r6 :' + r6+'<br>');
+        document.write('r7 :' + r7+'<br>');
+
+
+        //문자열변환
+        let num1 =10;
+        let num2 = 1.2;
+        
+        let rs1=String(num1);
+        let rs2=String(num2);
+
+        document.write('rs1: ' +rs1 + ', type' +typeof rs1 + '<br>');
+        document.write('rs1: ' +rs2 + ', type' +typeof rs2 + '<br>');
+
+
+        //타이머 함수
+        setTimeout(function(){
+            //document.write('<p>3초뒤에 출력!!!</p>')
+            console.log('<p>3초뒤에 출력!!!</p>')
+        }, 1000*3); //3초뒤에 익명함수(콜백함수) 실행
+        
+        setInterval(function(){
+            console.log('3초마다 출력!');
+        },1000*3)//3초마다 익명함수(콜백함수)실행
+
+        
+        //대화 상자
+        alert('기본 대화상자');
+
+        const result = confirm('확인, 취소 대화상자')
+
+        if(result){
+            document.write('<p>확인을 누르셨습니다. </p>');
+        }
+        else
+            document.write('<p>취소를 누르셨습니다. </p>');
+
+        
+            const value = prompt('입력 대화상자');
+            document.write('<p>입력값 : ' + value + '</p>')
+    </script>
+</body>
+</html>

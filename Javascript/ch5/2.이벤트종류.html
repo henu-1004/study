@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.이벤트종류</title>
+    <!--
+        날짜 : 2025.08.29  
+        이름 : 서현우
+        내용 : 5장 자바스크립트 이벤트
+    -->
+    <style>
+        html{
+            width:100%;
+            height:2000px;
+        }
+
+        #top{
+            position:fixed;
+            right:10px;
+            bottom :10px;
+        }
+
+        .box{
+            display : inline-block;
+            width : 100px;
+            height: 100px;
+            border : 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        console.log('here1...');
+
+        //해당위치에서 문서객체가 생성될까? > 안됨 > 아직 밑의 요소가 로드되지않음
+        //브라우저가 아직 HTML 문서전체를 로드하지 않은 시점이기때문에 이 위치에서는 문서객체 생성 불가
+        const btn1 = document.getElementById('btn1');
+        console.log(btn1); //여기서는 null로 나옴
+
+        //JQuery
+
+        //문서로드 이벤트 - 브라우저가 HTML문서를 로드 완료 한 후 실행
+        document.addEventListener('DOMContentLoaded', function(){
+            console.log('here3...');
+
+            //HTML 문서로드가 완료된 시점이기때문에 문서객체 생성 가능
+            const btn1 = document.getElementById('btn1');
+            console.log(btn1);
+
+            btn1.addEventListener('click', function(){
+                alert('클릭!');
+            })
+
+            
+            const top = document.getElementById('top');
+            top.addEventListener('click',function(){
+              window.scrollTo(0,0);  //가로, 세로 00이니까 상단이동, 브라우저 스크롤 최상단으로 이동
+            })
+
+
+            ////////////////////////////////
+            //마우스이벤트종류
+            ////////////////////////////////
+            const boxs = document.getElementsByClassName('box');
+
+            boxs[0].addEventListener('click',function(){
+                //리스너(콜백함수)에서 this는 이벤트가 발생한 태그요소(문서객체)
+                this.style.background = 'red';
+            });
+            boxs[1].addEventListener('mousedown',function(){
+                this.style.background='blue';
+            });
+            boxs[2].addEventListener('mouseup',function(){
+                this.style.background='green';
+            });
+            boxs[3].addEventListener('mouseover',function(){
+                this.style.background='orange';
+            });
+            boxs[4].addEventListener('mouseenter',function(){
+                this.style.background='yellow';
+            });
+            boxs[5].addEventListener('mouseout',function(){
+                this.style.background='pink';
+            });
+            boxs[6].addEventListener('mousemove',function(){
+                //마우스 실시간 이벤트
+                this.style.background='purple';
+                console.log('mousemove!');
+            });
+
+
+            
+            ////////////////////////////////
+            //키보드  이벤트종류
+            ////////////////////////////////
+
+            const inputUser = document.getElementsByName('user')[0];
+            const inputName = document.getElementsByName('name')[0];
+            const spanResult = document.getElementsByClassName('result');
+
+            inputUser.addEventListener('keydown', function(){
+                spanResult[0].innerText = this.value;
+            });
+            inputName.addEventListener('keyup', function(){
+                spanResult[1].innerText = this.value
+            });
+
+
+            ////////////////////////////////
+            //폼  이벤트종류
+            ////////////////////////////////
+
+            //폼태그의 name속성 이름으로 문서객체 참조 가능 > form태그는 특별한느낌
+            //const form = document.getElementsByName('formUser')[0];
+            const formUser = document.formUser;
+            const inputUid = formUser.uid;
+            const inputPass = formUser.pass;
+            const selectAddr = formUser.addr;
+            const spanPrint=document.querySelectorAll('.print');
+
+            inputUid.addEventListener('focus',function(){
+                //커서가 입력될때
+                spanPrint[0].innerText='focus!';
+            });
+            inputPass.addEventListener('focusout',function(){
+                //커서가 빠져나갈때
+                spanPrint[1].innerText='focusout!';
+            });
+            selectAddr.addEventListener('change',function(){
+                //선택박스가 변경될때
+                spanPrint[2].innerText=this.value;
+            });
+            formUser.addEventListener('submit',function(){
+                //폼 전송버튼을 클릭했을때(전송수동처리) > 입력한값이 정확한지 검증을 해야함
+                alert('전송시작!');
+            });
+        }); //DOMcontentLoaded 이벤트 끝
+
+    </script>
+</head>
+<body>
+    <h3>2.이벤트종류</h3>
+    
+    <h4>문서 이벤트</h4>
+    <button id="btn1">확인</button>
+    <button id="top">상단이동</button>
+
+
+    <h4>마우스 이벤트</h4>
+    <div id = "content1">
+        <div class="box box1">click</div>
+        <div class="box box2">mousedown</div>
+        <div class="box box3">mouseup</div>
+        <div class="box box4">mouseover</div>
+        <div class="box box5">mouseenter</div>
+        <div class="box box6">mouseout</div>
+        <div class="box box7">mousemove</div>
+    </div>
+    <h4>키보드 이벤트</h4>
+    <div id="content2">
+        <p>
+            <input type="text" name="user">
+            <span class="result"></span>
+        </p>
+        <p>
+            <input type="text" name="name">
+            <span class="result"></span>
+        </p>
+
+    </div>
+    <h4>폼 이벤트</h4>
+    <form name="formUser">
+        <table border="1">
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="uid">
+                    <span class="print"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pass">
+                    <span class="print"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <select name="addr">
+                        <option>서울</option>
+                        <option>대전</option>
+                        <option>대구</option>
+                        <option>부산</option>
+                        <option>광주</option>
+                    </select>
+                    <span class="print"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="가입">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+</html>
+<script>
+    console.log('here2...');
+    //해당위치에서 문서객체가 생성될까? > 됨 > 브라우저로드를 순차적으로 해서 위의 요소가 로드 다 됐기때문
+    // const btn2 = document.getElementById('btn1');
+    // console.log(btn2); //여기서는 제대로 나옴
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 11rotate.html </title>
+    <style>
+        .origin{
+            border:  1px solid darkorange;
+            width: 210px;
+            height: 200px;
+            margin-bottom: 2px;
+        }
+
+        .rotate2:hover{
+           transform: rotate(20deg);
+        }
+
+        .rotate3:hover{
+           transform: rotate(-55deg);
+        }
+
+        .rotate4:hover{
+           transform: rotate3d(2.5, 1.2, -1.2, 55deg);
+        }
+
+        .rotate5:hover{
+           transform: rotateZ(55deg);
+        }
+    </style>
+</head>
+<body>
+   <h2> 11rotate.html </h2> 
+
+    <div class="origin">
+     <div class="rotate2"> <img src="./images/fruit.jpg"> </div>
+   </div>
+
+    <div class="origin">
+     <div class="rotate3"> <img src="./images/fruit.jpg"> </div>
+   </div>
+   
+    <div class="origin">
+     <div class="rotate4"> <img src="./images/fruit.jpg">   rotate5</div>
+   </div>
+   
+    <div class="origin">
+     <div class="rotate5"> <img src="./images/fruit.jpg"> </div>
+   </div>
+</body>
+</html>

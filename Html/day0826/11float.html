@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 11float.html </title>
+    <style>
+        .container{
+           border: 1px solid lightgray;
+           height: 480px;
+        }
+
+        .prod-list img { width: 350px; height: 200px;}
+
+        .prod-list  .caption {
+           position: absolute;
+           top:200px ;
+           width: 350px;
+           height: 200px;
+           padding-top: 20px;
+           opacity: 1;
+           background: rgba(0, 0, 0, 0.456);
+           transition: all 0.7s ease-in-out;
+           z-index: 1;
+        }
+
+        .prod-list li {
+           list-style: none;
+           float:left;
+           padding: 0;
+           margin: 10px;
+           overflow: hidden;
+           position: relative;
+        }
+
+        .prod-list li:hover .caption {
+           opacity:0.3; 
+           transform: translateY(-200px);
+        }
+
+        .caption{
+           text-align: center;
+           color:white;
+           font-size: 20pt; 
+        }
+
+
+        /* float속성 다시한번 복습   */
+        .myfloat{
+            font-size: 12pt; 
+        }
+
+        .myfloat h1{
+            font-size: 34pt; 
+            background-color: gray; 
+            margin: 0px 10px 0px 0px;
+            float: left;
+        }
+        
+        .myfloat div{
+            text-align:justify ;
+        }
+    </style>
+</head>
+<body>
+    <div class="myfloat">
+    <h1> 금 연 <br> 일 지 </h1>
+    <div>
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...   
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...   
+        </div>
+    </div>
+    <p style="margin-bottom: 50px;"></p>
+
+    <b> 11float.html 2시 17분 </b> <br>
+
+    <div class="container">
+        <ul class="prod-list">
+            <li>
+                <img src="./images/images1.jpg" alt="제품1">         
+                <div class="caption">
+                        <h2> 상품1 </h2>
+                        <p>상품1 상세설명 </p>
+                        <p>가격 : 12,3456원 </p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/images2.jpg" alt="제품2">         
+                <div class="caption">
+                        <h2> 상품2 </h2>
+                        <p>상품2 상세설명 </p>
+                        <p>가격 : 98,123원 </p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/images3.jpg" alt="제품3">         
+                <div class="caption">
+                        <h2> 상품3 </h2>
+                        <p>상품3 상세설명 </p>
+                        <p>가격 : 56,9081원 </p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/images4.jpg" alt="제품4">         
+                <div class="caption">
+                        <h2> 상품4 </h2>
+                        <p>상품4 상세설명 </p>
+                        <p>가격 : 76,1234원 </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

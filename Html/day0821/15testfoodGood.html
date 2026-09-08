@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>testfood.html</title>
+  <style>
+
+    .allfood {
+      max-width: 100%;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .food-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .food {
+      flex: 1 1 20%;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      height: 300px;
+    }
+
+    img {
+      width: 80px; height: 60px; padding: 2px;
+    }
+
+    h2 {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  </style>
+
+  	<script>
+		function drag(food) {		//드래그 시작시 호출 할 함수
+			food.dataTransfer.setData('Text', food.target.id);
+		};
+
+		function drop(food) {		//드롭시 호출 할 함수
+			var id = food.dataTransfer.getData('Text');
+			food.target.appendChild(document.getElementById(id));
+		};
+	</script> 
+</head>
+
+<body>
+  <div class="allfood" ondrop="drop(event);"  ondragover="return false;">
+    <h2>부전시장 음식을 종류별로 드래그 해서 채워보세요.</h2>
+    <img src="imagefood/1.jpg" alt="비빔밥" id="kor1"  ondragstart="drag(event)"/>
+    <img src="imagefood/2.jpg" alt="전복죽" id="kor2"  ondragstart="drag(event)"/>
+    <img src="imagefood/3.jpg" alt="빈대떡" id="kor3"  ondragstart="drag(event)"/>
+    <img src="imagefood/4.jpg" alt="골뱅이" id="f1"   ondragstart="drag(event)"/>
+    <img src="imagefood/5.jpg" alt="김밥"  id="f2"   ondragstart="drag(event)"/>
+    <img src="imagefood/6.jpg" alt="떡볶이" id="f3"  ondragstart="drag(event)"/>
+    <img src="imagefood/7.jpg" alt="짜장면" id="ch1"  ondragstart="drag(event)"/>
+    <img src="imagefood/8.jpg" alt="탕수육" id="ch2"  ondragstart="drag(event)"/>
+    <img src="imagefood/9.jpg" alt="생선회" id="ch3"  ondragstart="drag(event)"/>
+  </div>
+
+  <div class="food-container" >
+    <div class="food" ondrop="drop(event);" ondragover="return false;">
+      <h2>한식</h2>
+    </div>
+    <div class="food" ondrop="drop(event);" ondragover="return false;">
+      <h2>분식</h2>
+    </div>
+    <div class="food" ondrop="drop(event);" ondragover="return false;">
+      <h2>중식</h2>
+    </div>
+  </div>
+</body>
+</html>

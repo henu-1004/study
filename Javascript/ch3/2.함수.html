@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.함수</title>
+    <!--외부스크립트 파일 로드-->
+    <script src="./lib/calc.js"></script>
+        <!--
+        날짜:2025/08/28
+        이름:서현우
+        내용:3장 배열과 함수
+    -->
+</head>
+<body>
+    <h3>2.함수</h3>
+    <script>
+        //선언함수
+        function f1(x){
+            let y = 2*x+3;
+            return y;
+        }
+
+        let y1=f1(1);
+        let y2=f1(2);
+        let y3=f1(3);
+
+        document.write('y1 : ' + y1 + '<br>');
+        document.write('y2 : ' + y2 + '<br>');
+        document.write('y3 : ' + y3 + '<br>');
+
+
+        //익명함수 : 이름이 없는 함수, 변수에 저장하는 함수
+        const f2 = function (x,y){
+            return x+y;
+        }; //함수이름이없으니까 함수를 변수에 담음
+
+        //변수이름으로 함수호출
+        let r1=f2(1,2);
+        let r2=f2(2,3);
+        let r3=f2(2,-1);
+
+        //화살표함수(람다식임)
+        const f3 = (x,y)=>{
+            return x+y;
+        };
+
+        const f4=(x,y)=>x-y; //중괄호생략되면 그게리턴
+
+        let rs1=f3(1,2);
+        let rs2=f3(2,4);
+        let rs3=f4(1,2);
+        let rs4=f4(3,2);
+
+        document.write('rs1: ' +rs1 + '<br>');
+        document.write('rs2: ' +rs2 + '<br>');
+        document.write('rs3: ' +rs3 + '<br>');
+        document.write('rs4: ' +rs4 + '<br>');
+
+
+        //외부함수호출
+        let res1 = plus(1,2);
+        let res2 = minus(1,2);
+        let res3 = multi(2,3);
+        let res4 = div(4,2);
+
+        document.write('res1 : '+ res1 + '<br>')
+        document.write('res2 : '+ res2 + '<br>')
+        document.write('res3 : '+ res3 + '<br>')
+        document.write('res4 : '+ res4 + '<br>')
+    </script>
+</body>
+</html>

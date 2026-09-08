@@ -1,0 +1,5 @@
+#section1
+content1 modified by master
+
+#section2
+content2 by feature

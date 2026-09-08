@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 07myform.html </title>
+    <style>
+        * {font-size: 20pt;}
+
+        .input_group{
+            height: 50px;
+            border-bottom: 2px dotted #abcdef;
+        }
+
+        textarea{
+          font-size: 18pt; 
+          font-weight: bold;
+        }
+    </style>
+
+
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+    <script>
+      function execDaumPostcode() {
+          new daum.Postcode({
+              oncomplete: function(data) {
+                  var fullAddr = '';
+                  var extraAddr = '';
+                  
+                  if (data.userSelectedType === 'R') fullAddr = data.roadAddress;
+                  else fullAddr = data.jibunAddress;
+
+                  if(data.userSelectedType === 'R') {
+                      if(data.bname !== '') extraAddr += data.bname;
+                      if(data.buildingName !== '') extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                      
+                      fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                  }
+
+                document.getElementById('user_post').value = data.zonecode; //5자리 새우편번호 사용
+                //document.getElementById("jusocode").value = data.postcode;
+                document.getElementById("user_juso1").value = fullAddr;
+                document.getElementById("user_juso2").focus();
+              }
+          }).open();
+      } //end
+    </script>
+</head>
+
+<body>
+  <div style="width: 900px;">
+  <form name="myform" action="" method="get">
+    <fieldset>
+        <legend> 초간단 가입화면 만들기 </legend>
+        <div class="input_group">
+          <label>이름:</label>
+          <input type="text" name="user_name" placeholder="이름을 입력하세요">
+        </div>  
+
+        <div class="input_group">
+          <label>비번:</label>
+          <input type="password" 
+                 maxlength="6" name="user_pwd" placeholder="비밀번호는 주민번호입니다">
+        </div>
+
+        <div class="input_group">
+          <label>성별:</label>
+          <label> <input type="radio" name="gender" value="man">남자</label>
+          <label> <input type="radio" name="gender" value="woman" checked>여자</label>
+        </div>
+
+        <div class="input_group">
+          <label>취미:</label>
+          <label> <input type="checkbox" name="hobby" value="play">축구</label>
+          <label> <input type="checkbox" name="hobby" value="movie">영화</label>
+          <label> <input type="checkbox" name="hobby" value="study" checked>공부</label>
+        </div>
+
+        <div class="input_group">
+          <label>직업:</label>
+          <select name="job">
+             <option value="">----- 선택하세요 -----</option>
+             <option value="dba">DBA관리자</option>
+             <option value="pub">디자이너</option>
+             <option value="developer" selected>개발자</option>
+             <option value="manager">매니저</option>
+          </select>
+        </div>
+
+        <div class="input_group">
+          <label>파일:</label>
+          <input type="file" name="user_file" size="30">
+        </div>
+
+        
+        <div class="input_group">
+          <label> </label>
+          <textarea name="memo" rows="5" cols="30" placeholder="자유롭게 의견을 남겨주세요"></textarea>
+        </div>
+        
+        <div class="input_group"></div>
+        <div class="input_group"></div>
+        <input type="hidden" name="mycheck" value="1234"> <!--안보여주는 부분-->
+
+        <div class="input_group">
+          <label>참조코드:</label>
+          <input type="text" name="user_code" value="1234" readonly>
+        </div>
+
+
+         <div class="input_group">
+            <label>우편:</label>
+            <input type="text" name="user_post" id="user_post" size="10" /> 
+            <input type="button" value="우편번호" onclick="execDaumPostcode();">
+        </div>
+        <div class="input_group">
+            <label>주소:</label>
+            <input type="text" name="user_juso1" id="user_juso1" /> 
+        </div>
+        <div class="input_group">
+            <label>상세주소:</label>
+            <input type="text" name="user_juso2" id="user_juso2" /> 
+        </div>
+
+         <div class="input_group">
+          <input type="submit"  value="가입하기">  &nbsp;&nbsp;
+          <input type="reset"  value="입력취소">
+        </div>
+     </fieldset>
+  </form>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.변수</title>
+     <!--
+    날짜:2025/08/28
+    이름:서현우
+    내용:2장 javascript변수와 연산자
+-->
+</head>
+<body>
+    <h3>1.변수</h3>
+    <script>
+        //var 변수 : ES6이전에 사용된 변수 키워드, 현재는 권장x
+        var value1 = 1;
+        var value2 = 1.2;
+
+        //let 변수 : Es6이후 도입된 변수 키워드
+        let var1=1;
+        let var2=3.14;
+        let var3=true;
+        let var4=false;
+        let var5="hello"; //JS는 문자열을 큰따옴표, 작은따옴표 둘다 가능
+        let var6='hello';
+        let var7=null; //null은 객체가 초기화 안된 상태값
+        let var8; //undifined 
+
+        //const 변수 : ES6이후 도입된 상수 키워드, 문서 객체 선언 키워드
+        const NUM1 = 1;
+        const NUM2 = 1.2;
+
+    
+        document.write('<p>');
+        document.write('value1 : ' + value1+ ', type : ' + typeof value1 + '<br>');
+        document.write('value1 : ' + value2+ ', type : ' + typeof value2 + '<br>');
+        document.write('var1 : ' + var1+ ', type : ' + typeof var1 + '<br>');
+        document.write('var2 : ' + var2+ ', type : ' + typeof var2 + '<br>');
+        document.write('var3 : ' + var3+ ', type : ' + typeof var3 + '<br>');
+        document.write('var4 : ' + var4+ ', type : ' + typeof var4 + '<br>');
+        document.write('var5 : ' + var5+ ', type : ' + typeof var5 + '<br>');
+        document.write('var6 : ' + var6+ ', type : ' + typeof var6 + '<br>');
+        document.write('var7 : ' + var7+ ', type : ' + typeof var7 + '<br>');
+        document.write('var8 : ' + var8+ ', type : ' + typeof var8 + '<br>');
+        document.write('NUM1 : ' + NUM1+ ', type : ' + typeof NUM1 + '<br>');
+        document.write('NUM2 : ' + NUM2+ ', type : ' + typeof NUM2 + '<br>');
+
+        document.write('</p>');
+
+    </script>
+    
+</body>
+</html>

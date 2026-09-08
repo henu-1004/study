@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.비동기처리</title>
+    <!--
+        날짜: 2025.09.01
+        이름 :서현우
+        내용 : 6장 비동기처리와 AJAX
+    -->
+</head>
+<body>
+    <h3>1.비동기처리</h3>
+    
+    <script>
+        console.log('here1...');
+
+        //비동기 처리(논블록킹)
+        setTimeout(function(){
+            console.log('here2...');    
+        }, 1000);
+        
+        console.log('here3...');
+
+        //콜백함수를 이용한 비동기 처리
+        console.log('start...');
+        function process(callback){
+            setTimeout(function(){
+                console.log('process...');
+                //작업 후 callback 함수 end 호출
+                callback();
+            },1000);
+        }
+
+        function end(){
+            console.log('end...');
+        }
+
+        process(end);
+
+        //콜백지옥 > 콜백이 계속 중첩되는거
+        function step1(callback){
+            setTimeout(function(){
+                console.log('step1...');
+                callback();
+            }, 1000);
+        }
+        
+        function step2(callback){
+            setTimeout(function(){
+                console.log('step2...');
+                callback();
+            }, 3000);
+        }
+        
+        function step3(callback){
+            setTimeout(function(){
+                console.log('step3...');
+                callback();
+            }, 2000);
+        }
+
+
+        //콜백지옥 : 비동기처리함수가 중첩되는 현상
+        step1(function(){
+            step2(function(){
+                step3(function(){
+                    console.log('done...');
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> [10div.html ]</title>
+
+    <style>
+        * { font-size: 20pt; font-weight: bold;  }
+
+        div{
+            width: 250px;
+            height: 100px;
+            margin-bottom: 30px;
+            /* border-style: solid; */
+        }
+        .box1{ 
+            border-color: red;
+            margin-left: 70px;
+            margin-top: 70px;
+            padding-left: 50px;
+            padding-top: 50px;
+            border-width: 5px;
+            border-style:solid;
+        }
+
+        .box2{
+            /* 마진및패딩은 여러분각자 기술 */
+            margin: 50px;
+            border-style: dashed;
+            background-color: #abcdef;
+            border-width: thick thin;
+            padding: 10px;
+        }
+
+        .box3{
+            border-style:solid;
+            border-top-color: tomato;
+            /* border-width: 5px 20px 1px 10px;  위 오 아 왼 */ 
+            /* border-width: 5px 20px 1px ; 위 오 아  */
+            border-width: 5px 20px  ; /*위/아  오/왼쪽  */
+        }
+
+        .box4{
+            border-style: outset;
+            border-width: 10px 6px 7px 3px; /* 시계 12시 방향  */
+            padding-left: 50px;
+            padding-top: 30px;
+            border-left-color: aquamarine;
+            border-right-color: violet;
+            border-bottom-color: yellowgreen;
+        }
+
+        .box5{ 
+            border-color: #abcdef;
+            color:red;
+            background-color: beige;
+            margin-left: 70px;
+            margin-top: 70px;
+            padding-left: 50px;
+            padding-top: 50px;
+            border-width: 5px;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"> 박스div1 </div> 
+<div class="box2"> 박스div2 </div> 
+<div class="box3"> 박스div3 </div> 
+<div class="box4"> 박스div4 </div>  
+<div class="box5"> 박스div5 </div>
+
+<!-- box5 마진,패딩,border스타일,컬러 기타등등 적용 -->
+</body>
+</html>

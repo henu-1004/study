@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 02table.html </title>
+    <style>
+        * {
+            font-size: 20pt;
+          }
+
+        table, tr, th, td {
+          border:1px solid blank;
+          border-collapse: collapse;
+        }
+
+        .mytitle{background-color: pink;}
+    </style>
+</head>
+<body>
+    table연습1 
+    <table width="800" border="1" cellspacing="0" cellpadding="7" >
+        <tr>
+          <th colspan="3"> 2025년 서면증권 관심종목 </th>
+        </tr>
+
+        <tr bgcolor="yellow">
+          <td> 거래종목 </td>  <!-- table header제목 굵게 중앙맞춤-->
+          <td> 상한가 </td>
+          <td> 거래날짜 </td>
+        </tr>
+
+        <tr>
+          <td>삼화네트윅스</td>  <!-- table data = table column -->
+          <td>1546</td>
+          <td>2025-07-12</td>
+        </tr>
+
+        <tr>
+          <td>아이비젼윅스</td>
+          <td>4172</td>
+          <td>2025-08-15</td>
+        </tr>
+
+        <tr>
+          <td>인스코비</td>
+          <td>870</td>
+          <td>2025-07-30</td>
+        </tr>
+
+        <tr>
+          <td>하이드로리튬</td>
+          <td>3190</td>
+          <td>2025-08-1</td>
+        </tr>
+    </table>
+
+    <p></p>
+    table연습2 
+    <table width="800">
+        <tr>
+          <th colspan="4"> 2025년 서면증권 관심종목 </th>
+        </tr>
+
+        <tr class="mytitle">
+          <td> 거래종목 </td>  <!-- table header제목 굵게 중앙맞춤-->
+          <td> 상한가 </td>
+          <td> 거래날짜 </td>
+          <td> 공지사항 </td>
+        </tr>
+
+        <tr>
+          <td>시애틀google</td>  <!-- table data = table column -->
+          <td>1546</td>
+          <td>2025-07-12</td>
+          <td rowspan="4"> 
+            <img src="./images/ai.png" height="220" title="추천종목">
+          </td>
+        </tr>
+
+        <tr>
+          <td>미국MS</td>
+          <td>4172</td>
+          <td>2025-08-15</td>
+        </tr>
+
+        <tr>
+          <td>하이닉스</td>
+          <td>870</td>
+          <td>2025-07-30</td>
+        </tr>
+
+        <tr>
+          <td>삼성전자</td>
+          <td>3190</td>
+          <td>2025-08-1</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+

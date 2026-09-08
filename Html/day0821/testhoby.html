@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> testhoby </title>
+<style>
+    img{
+        width:80px;
+        height: 60px;
+        padding: 2px;
+    }
+    .allfood{
+        border : 1px solid black;
+        width:950px;
+        height:150px;
+        padding: 5px;
+        margin:20px;
+        text-align: center;
+    }
+
+    .food{
+        border: solid;
+        border-width: 1px;
+        border-color: black;
+        padding: 5px;
+        margin:20px;
+        width:280px;
+        height:200px;
+        float:left;
+        text-align: center;
+    }
+    h2{
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+</style>    
+
+</head>
+<body>
+    <div class="allfood">
+        <h2>원하는 사진을 드래그 해서 채워보세요.</h2>
+        <img src="images/aaa.gif" alt="오리"  id="kor1"/>
+        <img src="images/favicon.ico" alt="naver"  id="kor2" />
+        <img src="images/instagram.png" alt="instagram"  id="kor2"  />
+        <img src="imagefood/4.jpg" alt="골뱅이"  id="f1" />
+        <img src="imagefood/5.jpg" alt="김밥"   id="f2" />
+        <img src="imagefood/6.jpg" alt="떡복이"  id="f3" />
+        <img src="imagefood/7.jpg" alt="짜장면"  id="ch1"  />
+        <img src="imagefood/8.jpg" alt="탕수육"  id="ch2" />
+        <img src="imagefood/9.jpg" alt="생선회"   id="ch3" />
+    </div>
+    
+   <!-- 
+     첫번째 이미지 사이즈  가로 * 세로 
+     두번째 food속성의 div태그, allfood속성의 div태그
+     세번째 h2글꼴 em속성사이즈 0.8em
+     네번째 마진,패딩 속성, food속성의 div에 중앙 맞춤
+     다섯번째 div태그 float속성
+   -->
+
+    <div class="food">
+        <h2>한식</h2>
+    </div>
+    <div class="food">
+        <h2>분식</h2>
+    </div>
+    <div class="food">
+        <h2>중식</h2>
+    </div>
+    <div class="food">
+        <h2>비음식</h2>
+    </div>
+</body>
+</html>

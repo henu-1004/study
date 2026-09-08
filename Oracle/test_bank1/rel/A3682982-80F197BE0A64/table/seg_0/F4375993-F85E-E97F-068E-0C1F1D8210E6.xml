@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F4375993-F85E-E97F-068E-0C1F1D8210E6" name="Customer">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:10:05 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_jumin" id="477D71CA-28D1-70E3-2D8C-BC8F87DACF2B">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="1B5AA8F3-ADB7-8BD5-6CCE-747B0E27A538">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="79397EB0-9D03-AAF2-87A6-070B666FA403">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth" id="6319630E-A652-CE1A-527C-082E4DCF9101">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="D1E95FDF-F0B0-323F-C289-A98716380C0D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hp" id="158C9A74-8999-2EF4-94E5-A8429A9C3F1A">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="job" id="479BA681-E731-F163-2B7A-A43280FCE4A4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93F2947D-3138-04E1-59F3-0E3D874B4BDF" name="Customer_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:13:12 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="477D71CA-28D1-70E3-2D8C-BC8F87DACF2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F334CF6-F7E0-44EE-2A7F-89D0AFB3BE86" name="Customer__UN">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:15:22 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1E95FDF-F0B0-323F-C289-A98716380C0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72171ADF-17CD-EDCE-0E7B-3AA2162E951D" name="Customer__UNv1">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:15:22 UTC</createdTime>
+<ownerDesignName>test_bank1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="158C9A74-8999-2EF4-94E5-A8429A9C3F1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

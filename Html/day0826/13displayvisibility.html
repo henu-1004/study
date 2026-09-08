@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 13displayvisibility.html </title>
+    <style>
+
+    </style>
+
+    <script>
+        function showDetail(){
+           document.querySelector("#desc").style.display = "block" ;
+        }//end
+
+        function hideDetail(){ 
+           document.querySelector("#desc").style.display = "none" ;
+           //document.querySelector("#desc").style.visibility = "hidden";    
+        }//end
+    </script>
+</head>
+<body>
+    <h2> 13displayvisibility.html </h2>
+     <img src="./images/hydran.png" width="450" height="350"> <br>
+     <button onclick="showDetail();">상세보기</button> <br>
+    <div id="desc">
+        <b> 등심붓꽃 </b>
+        <p> 
+            한반도 중부 지역에서는 주로 화분에 심는데, 노지월동이 되는 편이다. 
+            다만 그 해 난 가지에서 꽃을 피우는 수국(당년지수국)이 아니면 중부지방에서 노지에 심을 경우 월동시 보온처리가 없으면 꽃을 보기 어렵고 깻잎만 무성한 걸 보게 된다.
+            꽃말은 냉정, 냉담과 무정  변덕 변심이다. 또 위와는 다르게 진실한 사랑 진심 인내심이 강한 사랑이라는 꽃말도 존재한다.
+            또한 꽃의 색으로 토양의 pH를 확인할 수 있는데 pH6.0~6.5 정도의 토양에선 핑크색, pH4.5 정도의 산성토에선 푸른색을 띈다. 
+            토양이 산성에서 점점 중성으로 올라갈수록, 보라색, 자주색, 옅은 자주색, 분홍색으로 변한다. 품종에 따라서 색깔이 고정되는 경우도 있다.
+            꽃피는 시기가 초여름의 장마철과 겹치는데, 그 이유는 수국이 정말이지 물을 엄청나게 먹어대는 식물이기 때문이다.  </p>
+            <button onclick="hideDetail();">상세닫기</button>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch07.Spring Security</title>
+    <!--
+        날짜 : 2025/09/23
+        이름 : 서현우
+        내용 : 7장 Spring Security 실습
+    -->
+</head>
+<body>
+<h3>ch07.Spring Security</h3>
+
+<h4>인증 실습</h4>
+
+<th:block th:if="${user}">
+    <a th:href="@{/user/info}">사용자 정보</a>
+    <a th:href="@{/user/logout}">로그아웃</a>
+</th:block>
+<th:block th:unless="${user}">
+    <a th:href="@{/user/login}">로그인</a>
+    <a th:href="@{/user/register}">회원가입</a>
+</th:block>
+
+</body>
+</html>

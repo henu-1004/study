@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 50px;
+      background: skyblue;
+      margin: 5px;
+    }
+
+    .inline-example span {
+      display: inline;
+      background: pink;
+      margin: 5px;
+    }
+
+    .inline-block-example span {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      background: lightgreen;
+      margin: 5px;
+    }
+
+    .block-example div {
+      display: block;
+      background: lightcoral;
+      margin: 5px;
+    }
+
+    .flex-example {
+      display: flex;
+      gap: 10px;
+      background: #eee;
+      padding: 10px;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      background: #eee;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>display:inline</h2>
+  <div class="inline-example">
+    <span>One</span>
+    <span>Two</span>
+    <span>Three</span>
+  </div>
+
+  <h2>display:inline-block</h2>
+  <div class="inline-block-example">
+    <span>One</span>
+    <span>Two</span>
+    <span>Three</span>
+  </div>
+
+  <h2>display:block</h2>
+  <div class="block-example">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+
+  <h2>display:flex</h2>
+  <div class="flex-example">
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+  </div>
+
+  <h2>display:grid</h2>
+  <div class="grid-example">
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+  </div>
+</body>
+</html>

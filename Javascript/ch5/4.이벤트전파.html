@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.이벤트전파</title>
+    <style>
+        div{
+            padding:10px;
+            box-sizing : border-box;
+        }
+        .box1{
+            width:300px;
+            height:300px;
+            border:1px solid black;
+        }
+        
+        .box2{
+            width:200px;
+            height:200px;
+            border:1px solid black;
+        }
+        
+        .box3{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const box1s = document.getElementsByClassName('box1');
+            const box2s = document.getElementsByClassName('box2');
+            const box3s = document.getElementsByClassName('box3');
+
+            //이벤트 버블링 - 이벤트 발생이 상위로 전파되는 현상
+            box1s[0].addEventListener('click', function(e){
+
+                //이벤트전파를 차단
+                //e.stopPropagation();
+                console.log('버블링 box1 click');
+            })
+            box2s[0].addEventListener('click', function(e){
+                console.log('버블링 box2 click');
+            })
+            
+            box3s[0].addEventListener('click', function(e){
+                console.log('버블링 box3 click');
+            })
+            
+
+            //이벤트 캡처링 이벤트 발생이 하위로 전파되는 현상, addEvent Listener의 3번째 인자로 true전달
+            
+            box1s[1].addEventListener('click', function(e){
+                console.log('캡처링 box1 click');
+            },true)
+
+            
+            box2s[1].addEventListener('click', function(e){
+                console.log('캡처링 box2 click');
+            },true)
+
+            
+            box3s[1].addEventListener('click', function(e){
+                console.log('캡처링 box3 click');
+            },true)
+        });
+    </script>
+</head>
+<body>
+    <h3>4.이벤트전파</h3>
+
+    
+    <h4>버블링</h4>
+    <div class="box1">box1
+        <div class="box2">box2
+            <div class="box3">box3</div>
+        </div>
+    </div>
+    <h4>캡처링</h4>
+    <div class="box1">box1
+        <div class="box2">box2
+            <div class="box3">box3</div>
+        </div>
+    </div>
+</body>
+</html>

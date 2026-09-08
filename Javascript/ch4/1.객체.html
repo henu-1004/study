@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.객체</title>
+    <script src="./js/Account.js"></script>
+    <!--
+        날짜 : 2025.08.28
+        이름 : 서현우
+        내용 : 4장 자바스크립트 객체
+    -->
+</head>
+<body>
+    <h3>1.객체</h3>
+    <script>
+        const kb = new Account('국민은행', '101-22-1001', '김유신', 10000);
+        kb.deposit(40000);
+        kb.withdraw(35000);
+        kb.show();
+
+        const wr = new Account('우리은행','101-22-1022','김춘추',20000)
+        wr.show();
+
+        //사용자정의 객체
+        const sonata={
+            name : '소나타',
+            color : '흰색',
+            speed : 0,
+
+            speedUp:function(speed){
+                this.speed+=speed;
+            },
+            speedDown:function(speed){
+                this.speed-=speed;
+            },
+            show:function(){
+                document.write('<p>');
+                document.write('차량명 :' + this.name + '<br>');
+                document.write('차량색 :' + this.color + '<br>');
+                document.write('현재속도 :' + this.speed + '<br>');
+                document.write('</p>');
+            }
+        }
+
+        sonata.speedUp(100);
+        sonata.speedDown(30);
+        sonata.show();
+    </script>
+</body>
+</html>

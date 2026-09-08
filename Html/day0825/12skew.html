@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 12skew.html </title>
+    <style>
+        .origin{
+            border:  1px solid darkorange;
+            width: 210px;
+            height: 200px;
+            margin-bottom: 2px;
+        }
+
+        .skew2:hover{
+           /* transform: rotate(20deg); */
+           transform: skew(-25deg, -15deg);  /* x방향  y방향 */
+        }
+
+        .skew3:hover{
+           transform:  skewY(15deg);
+        }
+
+        .skew4:hover{
+           transform:  skew(-30deg);
+        }
+    </style>
+</head>
+<body>
+   <h2> 12skew.html </h2> 
+
+    <div class="origin">
+     <div class="skew2"> <img src="./images/fruit.jpg"> </div>
+   </div>
+
+    <div class="origin">
+     <div class="skew3"> <img src="./images/fruit.jpg"> </div>
+   </div>
+   
+    <div class="origin">
+     <div class="skew4"> <img src="./images/fruit.jpg">  </div>
+   </div>
+   
+</body>
+</html>

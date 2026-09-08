@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> testfood.html </title>
+<style>
+    .allfood{
+       width: 950px; height: 150px;
+       border : 1px solid black;
+       padding:5px; 
+       margin: 20px;
+       text-align: center;
+    }
+
+    .food{
+       width: 280px; height: 200px;
+       border : 1px solid black;
+       padding:5px;
+       margin: 20px;
+       text-align: center;
+       float: left;
+    }
+
+    img {
+      width: 80px; height: 60px; padding: 2px;
+    }
+
+    h2{
+        font-size: .8em; font-weight: bold;
+    }
+</style>    
+
+<script>
+  var gate = 1234 ; //자바스크립트는 자바와 동일한 주석
+
+  function drag(food){
+
+  }
+  
+  function drop(food){
+    alert("드롭 함수 처리 프로시저")
+  }
+
+</script>
+
+</head>
+<body>
+    <div class="allfood" ondrag="" ondragover="">
+        <h2> 부전시장 음식을 종류별로 드래그 해서 채워보세요.</h2>
+        <img src="imagefood/1.jpg" alt="비빔밥"  id="kor1"/>
+        <img src="imagefood/2.jpg" alt="전복죽"  id="kor2" />
+        <img src="imagefood/3.jpg" alt="빈대떡"  id="kor3"  />
+        <img src="imagefood/4.jpg" alt="골뱅이"  id="f1" />
+        <img src="imagefood/5.jpg" alt="김밥"    id="f2" />
+        <img src="imagefood/6.jpg" alt="떡복이"  id="f3" />
+        <img src="imagefood/7.jpg" alt="짜장면"  id="ch1"  />
+        <img src="imagefood/8.jpg" alt="탕수육"  id="ch2" />
+        <img src="imagefood/9.jpg" alt="생선회"  id="ch3" />
+    </div>
+    
+   <!-- 
+     첫번째 이미지 사이즈  가로 * 세로 
+     두번째 food속성의 div태그, allfood속성의 div태그  여백 padding:5px;
+     3번째 h2글꼴 em속성사이즈 0.8em
+     4번째 마진,패딩 속성, food속성의 div에 중앙맞춤
+     5번째 div태그 float속성
+   -->
+
+    <div class="food" ondrag="" ondragover="">
+        <h2>한식</h2>
+    </div>
+    <div class="food" ondrag="" ondragover="">
+        <h2>분식</h2>
+    </div>
+    <div class="food" ondrag="" ondragover="">
+        <h2>중식</h2>
+    </div>
+</body>
+</html>

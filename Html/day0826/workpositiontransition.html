@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-smoke{
+            border:1px solid lightgray;
+            height:200px;
+        }
+
+        .container-smoke div{
+            text-align: justify;
+        }
+
+        .container-smoke h1{
+            font-size:34pt;
+            background-color: gray;
+            margin:0px 10px 0px 0px;
+            float:left
+        }
+        .container{
+            border: 1px solid red;
+            height : 480px;
+        }
+ 
+        .prod-list img{width: 350px; height:200px}
+
+        .prod-list .caption{
+            position : absolute;
+            top : 200px;
+            width:350px;
+            height:200px;
+            padding-top:20px;
+            opacity:1;
+            background: rgba(0,1,1,0.456);
+            transition: all 0.7s ease-in-out;
+            z-index: 1;
+
+        }
+
+        .prod-list li{
+            list-style:none;
+            float:left;
+            padding:0;
+            margin:10px;
+            overflow:hidden;
+            position:relative;
+        }
+        .prod-list li:hover .caption {
+           opacity:0.3; 
+           transform: translateY(-200px);
+        }
+
+        .caption{
+            text-align:center;
+            color:wheat;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <b>workpositiontransition.html</b> <br>
+    <div class="container-smoke">
+        <h1>금 연 <br> 일 지</h1>
+        <div>개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...   
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...
+         개인적인 기호를 법적으로만 관리할 수도 없는 것이고...   
+        </div>
+    </div><br>
+    <div class="container">
+        <ul class="prod-list">
+            <li>
+                <img src="./images/images1.jpg" alt="제품1">
+                <div class="caption">
+                    <h2>상품1</h2>
+                    <p>상품1 상세설명</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <style>
+        .user-tool{
+            text-align: right;
+            font-size: 10px;
+            color: black;
+            height: 5px;
+        }
+        .user-tool a:link{
+            color:black;
+        }
+
+        .head{
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;            
+            padding: 10px;
+            flex-wrap: wrap;  
+        }
+        .head .left{
+            flex:1;
+            position: relative;
+            top: -15px;
+        }
+        .head .center{
+            flex:1;
+            text-align:center;
+            transform: translateX(-50%);
+        }
+        .head .right{
+            flex:1;
+            display:flex;
+            justify-content: flex-end;
+         
+        }
+        .right .title {
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .right .desc {
+            font-size: 14px;
+            padding: 10px;
+        }
+        .head h1{
+            margin:0;
+        }
+        .head .left img{
+            margin-top:50px;
+            height: 20px;
+            width: 30px;
+        }
+        .head .left p{
+            left: 50px;
+            font-size: 13px;
+            display: inline;
+        }
+
+        .head .center{
+            position:absolute;
+            left:50%;
+        }
+
+
+
+        .tap ul{
+            list-style: none;
+            margin:0;
+            display:flex;
+            justify-content: center;
+            background-color: #3f382d;
+        }
+
+        .tap a:link,
+        .tap a:visited {
+            color: white;          
+            text-decoration: none; 
+        }
+        .tap a:hover{
+            color: orange;         
+        }
+
+        .tap li{
+            flex:1;
+            text-align: center;
+        }
+
+        .slider{
+            text-align: center;
+            background-color: #fdedd2;
+            overflow: hidden;
+        }
+
+        .go {
+            display: flex;
+            justify-content: center;  
+            align-items: center;     
+            gap: 20px;               
+        }
+
+        .go img {
+            display: block;
+        }
+
+        .go .left {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .go .left > img{
+            display: block;
+        }
+
+        .go .left a{
+            position:absolute;
+            left:10px;
+            top:60%;
+        }
+
+        .go .left .caption{
+            position:absolute;
+            top:0px;
+            left:20px;
+            color:white;
+        }
+
+        .go .left .caption .tag{
+            font-size: 18px;
+            font-weight: bold;
+            color: orange;
+        }
+        .go .left .caption .title{
+            font-size:24px;
+            font-weight: bold;
+        }
+
+        .go .left .caption .desc{
+            font-size: 16px;
+        }
+        .go .right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* 균등 2열 */
+            gap: 10px;
+        }
+
+        .go .right .item {
+            position: relative;
+        }
+
+        .go .right .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .go .right .item .caption {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+        }
+
+        .go .right .item .caption .tag {
+            font-size: 14px;
+            font-weight: bold;
+            color: orange;
+            margin: 0;
+        }
+
+        .go .right .item .caption .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px 0 0 0;
+        }
+
+        .go .right .item a {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .foot1{
+            margin-top: 20px;
+            background-color: #3f382d;
+            padding-left:300px;
+            color:white;
+            margin-bottom: 0px;
+        }
+
+        .foot1 a:link,
+        .foot1 a:visited,
+        .foot1 a:hover,
+        .foot1 a:active {
+            color: white;
+            text-decoration: none;
+        }
+
+        .foot2 {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;            
+            background: #434343;
+            color: white;
+            padding: 10px 300px;
+            height:80px;
+        }
+        .foot2 p {
+            margin: 0;
+            font-size: 10px;
+        }
+        .foot2 img{
+            position: absolute;
+            right: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <hr>
+        <div class="user-tool">
+            <p >
+                <a href="#">로그인|</a>
+                <a href="#">마이페이지|</a>
+                <a href="#">관심상품(0)|</a>
+                <a href="#">장바구니(0)</a>
+            </p>
+        </div>
+        <p></p>
+    <hr style="margin-bottom: 0px;">
+    <div class="head">
+        <div class="left" style="display: inline-block;">
+            <img  src="./images/ico_shopping.png" alt="로고">
+            <p><span style="color: orange;">SHOPPING</span>주문조회바로가기</p>
+        </div>
+        <h1 class="center">식자재<span style="color:orange;">전문</span>쇼핑몰</h1>
+        <div class="right">
+            <div class="title">
+                <span>원데이</span><br>
+                <span style="color:orange;">번개장터</span>
+            </div>
+            <div class="desc">
+                매일원가로 제공합니다!
+            </div>
+        </div>     
+    </div>
+    <div class="tap">
+        <ul>
+            <li><a href="#">채소/과일/곡류</a></li>
+            <li><a href="#">수산</a></li>
+            <li><a href="#">정육/달걀</a></li>
+            <li><a href="#">면/양념/소스</a></li>
+            <li><a href="#">음료/주류</a></li>
+            <li><a href="#">냉장/냉동식품</a></li>
+            <li><a href="#">캔/통조리</a></li>
+            <li><a href="#">가공/간편식품</a></li>
+            <li><a href="#">생활잡화</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/slider_banner1.jpg">
+            <!--<img src="images/slider_banner2.jpg">
+            <img src="images/slider_banner3.jpg">
+            <img src="images/slider_banner1.jpg"> -->
+        </div>
+    </div>
+    <br>
+    <div class="go">
+        <div class="left">
+            <img src="images/main_go_bg1.png" alt="">
+            <div class="caption">
+                <p class="tag">생활야채</p>
+                <p class="title">1일 1야채 <br> 건강한생활습관</p>
+                <p class="desc">아삭아삭 건강에도 좋은 <br> 야채를 1일 1야채로 <br>생활에 활기를 느껴보세요!</p>
+            </div>
+            <a href="#"><img src="images/main_go_ico.png"></a>
+        </div>
+        <div class="right">
+            <div class="item">
+                <img src="images/main_go_bg2.png" alt="">
+                <div class="caption">
+                    <p class="tag">특별이벤트</p>
+                    <p class="title">SHOP에서 진행하는 <br> 특별이벤트!</p>
+                </div>
+                <a href="#"><img src="images/main_go_ico.png"></a>
+            </div>
+            <div class="item">
+                <img src="images/main_go_bg3.png" alt="">
+                <div class="caption">
+                    <p class="tag">하루할인</p>
+                    <p class="title">오늘의 할인상품!</p>
+                </div>
+                <a href="#"><img src="images/main_go_ico.png"></a>
+            </div>
+            <div class="item">
+                <img src="images/main_go_bg4.png" alt="">
+                <div class="caption">
+                    <p class="tag">프리미엄</p>
+                    <p class="title">SHOP에서 인증하는 <br>프리미엄 상품</p>
+                </div>
+                <a href="#"><img src="images/main_go_ico.png"></a>
+            </div>
+            <div class="item">
+                <img src="images/main_go_bg5.png" alt="">
+                <div class="caption">
+                    <p class="tag">인기상품</p>
+                    <p class="title">SHOP의 인기상품</p>
+                </div>
+                <a href="#"><img src="images/main_go_ico.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot1">
+            <a href="#" style="color: orange;">이용약관</a>
+            |
+            <a href="#"> 이용안내 </a>
+            |
+            <a href="#">개인정보 취급 방침</a>
+        </div>
+        <div class="foot2">
+            <p>상호명 : 쇼핑몰   대표 : 홍길동   메일 : master@foodshop.com <br>
+                통신판매업신고번호 : 123-456-7890   사업자등록번호 : 123-45-7890   대표번호 : 070-1234-5678 <br>
+                팩스번호 : 051-1234-5678   개인정보관리자 : 김유신   주소 : 부산시 부산진구 서전로 123</p>
+            <img src="images/footer_tel.png" alt="">
+        </div>
+    </footer>
+
+</body>
+</html>

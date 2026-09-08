@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 09kor.html </title>
+    <script>
+      function myscore(){
+        var kor = 85 ;
+        var eng = 90 ;
+        var total=0, avg=0, hap=0, mean = 0 ;
+        var message = "";
+
+        total = kor + eng ;
+        avg = total / 2 ;
+        console.log("총점=" + total);
+        console.log("평균=" + avg);
+
+        message = "<b>총점 = " + total + " 평균 = " + avg +"</b><br>" ;
+        document.querySelector("#display").innerHTML = message ;
+      }//end
+    </script>
+</head>
+<body>
+    <b> 점수 계산</b>  <br>
+    <input type="button" onclick="myscore();" value="계산함수호출"> <br>
+    수험생: 나기동  <br>
+    <div id="display">
+      <img src="./images/a3.png" width="250" height="150"> <br> 
+    </div>
+</body>
+</html>

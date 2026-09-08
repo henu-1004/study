@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B64B8274-0739-62A6-DC33-5B3EF828EF8D" name="Account">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:10:25 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="acc_id" id="0407DB4B-94BA-123B-485C-C99CA743509D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_jumin" id="3596DBC2-27E7-F56D-0F50-86BBBC9AC31E">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:21:01 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE0C3309-7E79-6C00-5A29-5179CF1D373D" referredColumn="477D71CA-28D1-70E3-2D8C-BC8F87DACF2B"/>
+</associations>
+</Column>
+<Column name="acc_type" id="E9945CBB-CECC-A2A0-BEB0-09ABD2670159">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_balance" id="BF2D5F0F-47DF-BA3A-C39A-8B756C7C85E1">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_card" id="AB39DC06-45A4-EBFA-62FA-D9B6714630FA">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acc_register_date" id="25B00E97-D088-5693-66AE-2D313DDDBEE4">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BA9088AB-C181-D0DF-94CF-FAE7A898833F" name="Account_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:20:51 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0407DB4B-94BA-123B-485C-C99CA743509D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05384218-B9A5-7EF3-7569-811DF9E46A53" name="Account_Customer_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-13 00:21:01 UTC</createdTime>
+<ownerDesignName>test_bank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3596DBC2-27E7-F56D-0F50-86BBBC9AC31E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

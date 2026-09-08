@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> [11divfloat.html ]</title>
+
+    <style>
+        * { font-size: 20pt; font-weight: bold;  }
+
+        div{
+            margin-bottom: 5px;
+            border : 2px solid  brown;
+            display: inline; /* span태그효과  */
+        }
+
+        span{
+          border : 2px solid  brown;
+        }
+
+        .my{
+          border : 2px solid  brown;
+          float: left;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <!-- div태그는 원래 라인개행 기본 -->
+    <div> 박스div1 </div> 
+    <div> 박스div2 </div> 
+    <div> 박스div3  </div> 
+    <p></p>
+
+    <span>박스div1</span>
+    <span>박스div2</span>
+    <span>박스div3</span>
+    <p></p>
+
+    <div class="my"> 박스div1 </div> 
+    <div class="my"> 박스div2 </div> 
+    <div class="my"> 박스div3  </div> 
+    <p></p>
+</body>
+</html>

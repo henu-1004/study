@@ -1,0 +1,4 @@
+#제외할 파일
+sample.txt
+temp/
+*.log
