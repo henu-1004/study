@@ -1,0 +1,6 @@
+﻿  소스.c
+C:\Users\sho52\OneDrive\바탕 화면\c언어 코드들\repos\Project5\Project5\소스.c(25,35): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\sho52\OneDrive\바탕 화면\c언어 코드들\repos\Project5\Project5\소스.c(26,5): warning C4013: 'strcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Project5.vcxproj -> C:\Users\sho52\OneDrive\바탕 화면\c언어 코드들\repos\Project5\x64\Debug\Project5.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.

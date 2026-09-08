@@ -1,0 +1,5 @@
+﻿  calc.c
+C:\Users\sho52\source\repos\자구과제 실수계산\자구과제 실수계산\calc.c(9,23): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\sho52\source\repos\자구과제 실수계산\자구과제 실수계산\calc.c(222,34): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\sho52\source\repos\자구과제 실수계산\자구과제 실수계산\calc.c(249,21): warning C4244: '=': 'float'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  자구과제 실수계산.vcxproj -> C:\Users\sho52\source\repos\자구과제 실수계산\x64\Debug\자구과제 실수계산.exe

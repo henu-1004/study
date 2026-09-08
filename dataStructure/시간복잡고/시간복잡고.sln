@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "시간복잡고", "시간복잡고\시간복잡고.vcxproj", "{B1F14ABB-5B55-43CC-AD36-6533AE53F552}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Debug|x64.ActiveCfg = Debug|x64
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Debug|x64.Build.0 = Debug|x64
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Debug|x86.ActiveCfg = Debug|Win32
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Debug|x86.Build.0 = Debug|Win32
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Release|x64.ActiveCfg = Release|x64
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Release|x64.Build.0 = Release|x64
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Release|x86.ActiveCfg = Release|Win32
+		{B1F14ABB-5B55-43CC-AD36-6533AE53F552}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25567B5B-E9FB-43CB-B2AD-1D419D1C01C0}
+	EndGlobalSection
+EndGlobal

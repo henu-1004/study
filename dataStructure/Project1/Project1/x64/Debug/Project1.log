@@ -1,0 +1,5 @@
+﻿  ddd.c
+C:\Users\sho52\source\repos\Project1\Project1\ddd.c(224,9): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\sho52\source\repos\Project1\Project1\ddd.c(224,17): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\sho52\source\repos\Project1\Project1\ddd.c(70): warning C4715: 'Dequeue': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Project1.vcxproj -> C:\Users\sho52\source\repos\Project1\x64\Debug\Project1.exe
